@@ -1,0 +1,25 @@
+vi:
+  dictionary:
+    base_title: "Ứng dụng mẫu về Ruby on Rails"
+    tutorial: "Hướng dẫn Ruby on Rails"
+  static_pages:
+    about:
+      book: "sách"
+      intro: "Đây là ứng dụng mẫu cho bài hướng dẫn."
+      is: "là một"
+      screencast: "chuỗi thu hình"
+      teach: "để dạy lập trình web với"
+      title: "Thông tin thêm"
+    contact:
+      instruction: "Liên hệ với hướng dẫn của Ruby on Rails về ứng dụng mẫu tại"
+      page: "trang liên hệ"
+      title: "Liên hệ"
+    help:
+      book: "sách"
+      instruction1: "Tìm kiếm giúp đỡ với Ruby on Rails tại"
+      instruction2: "Để tìm kiếm sự giúp đỡ với ứng dụng mẫu thì có tại"
+      page: "trang giúp đỡ về Rails"
+      title: "Giúp đỡ"
+    home:
+      intro: "Đây là trang chủ cho"
+      title: "Trang chủ"
