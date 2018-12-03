@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
-    <%= csrf_meta_tags %>
+    <title><%= yield(:title) %> | <%= t "dictionary.base_title" %></title>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application",
+    media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application",
+    "data-turbolinks-track": "reload" %>
   </head>
 
   <body>
