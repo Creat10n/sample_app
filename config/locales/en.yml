@@ -1,6 +1,13 @@
 en:
   dictionary:
+    author: "Michael Hartl"
     base_title: "Ruby on Rails Tutorial Sample App"
+    by: "by"
+    log_in: "Log in"
+    news: "News"
+    sample_app: "Sample App"
+    sign_up: "Sign up now!"
+    the: "The"
     tutorial: "Ruby on Rails Tutorial"
   static_pages:
     about:
@@ -22,3 +29,8 @@ en:
       title: "Help"
     home:
       intro: "This is the home page for"
+      title: "Home"
+  users:
+    signup:
+      info: "This will be a sign up page for new users"
+      title: "Sign Up"
