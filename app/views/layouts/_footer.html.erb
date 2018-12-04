@@ -1,0 +1,19 @@
+<footer class="footer">
+  <small>
+    <%= t "dictionary.the" %>
+    <a href="http://www.railstutorial.org/"><%= t "dictionary.tutorial" %></a>
+    <%= t "dictionary.by" %>
+    <a href="http://www.michaelhartl.com/"><%= t "dictionary.author" %></a>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t("static_pages.about.title"), about_path %></li>
+      <li><%= link_to t("static_pages.contact.title"), contact_path %></li>
+      <li>
+        <a href="http://news.railstutorial.org/">
+          <%= t "dictionary.news" %>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</footer>

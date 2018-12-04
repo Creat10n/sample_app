@@ -1,6 +1,13 @@
 vi:
   dictionary:
+    author: "Michael Hartl"
     base_title: "Ứng dụng mẫu về Ruby on Rails"
+    by: "bởi"
+    log_in: "Đăng nhập"
+    news: "Tin tức"
+    sample_app: "Ứng dụng mẫu"
+    sign_up: "Đăng ký ngay!"
+    the: "Đây là"
     tutorial: "Hướng dẫn Ruby on Rails"
   static_pages:
     about:
@@ -22,3 +29,8 @@ vi:
       title: "Giúp đỡ"
     home:
       intro: "Đây là trang chủ cho"
+      title: "Trang chủ"
+  users:
+    signup:
+      info: "Đây là trang đăng ký giành cho người dùng mới"
+      title: "Đăng Ký"
