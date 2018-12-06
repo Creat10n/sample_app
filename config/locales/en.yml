@@ -9,6 +9,10 @@ en:
     sign_up: "Sign up now!"
     the: "The"
     tutorial: "Ruby on Rails Tutorial"
+  shared:
+    error_messages:
+      error: "error"
+      form: "The form contains"
   static_pages:
     about:
       book: "book"
@@ -33,5 +37,10 @@ en:
   users:
     new:
       signup:
-        info: "This will be a sign up page for new users"
+        form:
+          confirmation: "Confirmation"
+          create: "Create my account"
+          email: "Email"
+          name: "Name"
+          password: "Password"
         title: "Sign up"
