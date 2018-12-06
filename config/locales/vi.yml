@@ -31,6 +31,7 @@ vi:
       intro: "Đây là trang chủ cho"
       title: "Trang chủ"
   users:
-    signup:
-      info: "Đây là trang đăng ký giành cho người dùng mới"
-      title: "Đăng Ký"
+    new:
+      signup:
+        info: "Đây là trang đăng ký giành cho người dùng mới"
+        title: "Đăng ký"

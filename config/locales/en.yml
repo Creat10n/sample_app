@@ -31,6 +31,7 @@ en:
       intro: "This is the home page for"
       title: "Home"
   users:
-    signup:
-      info: "This will be a sign up page for new users"
-      title: "Sign Up"
+    new:
+      signup:
+        info: "This will be a sign up page for new users"
+        title: "Sign up"
