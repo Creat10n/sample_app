@@ -9,6 +9,10 @@ vi:
     sign_up: "Đăng ký ngay!"
     the: "Đây là"
     tutorial: "Hướng dẫn Ruby on Rails"
+  shared:
+    error_messages:
+      error: "lỗi"
+      form: "Form có"
   static_pages:
     about:
       book: "sách"
@@ -33,5 +37,10 @@ vi:
   users:
     new:
       signup:
-        info: "Đây là trang đăng ký giành cho người dùng mới"
+        form:
+          confirmation: "Xác nhận mật khẩu"
+          create: "Tạo tài khoản"
+          email: "Email"
+          name: "Tên"
+          password: "Mật khẩu"
         title: "Đăng ký"
