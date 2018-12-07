@@ -1,14 +1,36 @@
 en:
   dictionary:
-    author: "Michael Hartl"
     base_title: "Ruby on Rails Tutorial Sample App"
     by: "by"
-    log_in: "Log in"
-    news: "News"
-    sample_app: "Sample App"
-    sign_up: "Sign up now!"
+    rails: "Rails"
     the: "The"
     tutorial: "Ruby on Rails Tutorial"
+  layouts:
+    header:
+      account: "Account"
+      help: "Help"
+      home: "Home"
+      log_in: "Log in"
+      log_out: "Log out"
+      profile: "Profile"
+      sample_app: "Sample App"
+      settings: "Settings"
+      users: "Users"
+    footer:
+      about: "About"
+      author: "Michael Hartl"
+      contact: "Contact"
+      news: "News"
+  sessions:
+    new:
+      login:
+        fail: "Invalid email/password combination"
+        form:
+          email: "Email"
+          login: "Login"
+          new_user: "New user?"
+          password: "Password"
+          signup: "Sign up now!"
   shared:
     error_messages:
       error: "error"
@@ -32,15 +54,18 @@ en:
       page: "Rails Tutorial help page"
       title: "Help"
     home:
+      info: "Ruby on Rails Tutorial Sample App"
       intro: "This is the home page for"
+      sign_up: "Sign up now!"
       title: "Home"
   users:
     new:
-      signup:
+      sign_up:
         form:
           confirmation: "Confirmation"
           create: "Create my account"
           email: "Email"
           name: "Name"
           password: "Password"
+        success: "Welcome to the Sample App!"
         title: "Sign up"
