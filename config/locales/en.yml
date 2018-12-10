@@ -30,6 +30,7 @@ en:
           login: "Login"
           new_user: "New user?"
           password: "Password"
+          remember: "Remember me on this computer"
           signup: "Sign up now!"
   shared:
     error_messages:
