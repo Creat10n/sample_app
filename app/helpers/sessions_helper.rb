@@ -6,16 +6,27 @@ module SessionsHelper
 
   def check_log_in user, params
     if user && user.authenticate(params[:session][:password])
-      log_in user
-      if params[:session][:remember_me] == Settings.sessions.remember_me
-        remember user
+      if user.activated?
+        log_in user
+        set_remember_forget user, params[:session][:remember_me]
+        redirect_back_or user
       else
-        forget user
+        message = I18n.t "sessions.helper.flash.not_activated"
+        message += I18n.t "sessions.helper.flash.check_email"
+        flash[:warning] = message
+        redirect_to root_path
       end
-      redirect_back_or user
     else
-      flash.now[:danger] = t "sessions.new.login.fail"
+      flash.now[:danger] = I18n.t "sessions.helper.flash.invalid_email_pass"
       render :new
+    end
+  end
+
+  def set_remember_forget user, remember_me
+    if remember_me == Settings.sessions.remember_me
+      remember user
+    else
+      forget user
     end
   end
 
@@ -32,7 +43,7 @@ module SessionsHelper
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by id: user_id
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         log_in user
         @current_user = user
       end

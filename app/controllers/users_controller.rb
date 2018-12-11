@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page],
+    @users = User.activated.paginate page: params[:page],
       per_page: Settings.users.paginate.per_page
   end
 
@@ -16,34 +16,36 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      log_in @user
-      flash[:success] = t "users.create.success"
-      redirect_to @user # equivalent: redirect_to user_url(@user)
+      @user.send_activation_email
+      flash[:info] = t ".check_mail"
+      redirect_to root_path
     else
-      flash.now[:danger] = t "users.create.fail"
+      flash.now[:danger] = t ".fail"
       render :new
     end
   end
 
-  def show; end
+  def show
+    redirect_to root_path && return unless @user.activated
+  end
 
   def edit; end
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = t "users.update.success"
+      flash[:success] = t ".success"
       redirect_to @user
     else
-      flash[:danger] = t "users.update.fail"
+      flash[:danger] = t ".fail"
       render :edit
     end
   end
 
   def destroy
     if @user.destroy
-      flash[:success] = t "users.destroy.success"
+      flash[:success] = t ".success"
     else
-      flash[:danger] = t "users.destroy.fail"
+      flash[:danger] = t ".fail"
     end
     redirect_to users_path
   end
@@ -59,7 +61,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:danger] = t "users.flash.not_found"
+    flash[:danger] = t ".flash.not_found"
     redirect_to login_path
   end
 
@@ -69,7 +71,7 @@ class UsersController < ApplicationController
     return if logged_in?
 
     store_location
-    flash[:danger] = t "users.flash.not_logged_in"
+    flash[:danger] = t ".flash.not_logged_in"
     redirect_to login_path
   end
 
@@ -77,7 +79,7 @@ class UsersController < ApplicationController
   def correct_user
     return if current_user? @user
 
-    flash[:danger] = t "users.flash.not_correct_user"
+    flash[:danger] = t ".flash.not_correct_user"
     redirect_to root_path
   end
 
@@ -85,7 +87,7 @@ class UsersController < ApplicationController
   def admin_user
     return if current_user.admin?
 
-    flash[:danger] = t "user.flash.not_admin"
+    flash[:danger] = t ".flash.not_admin"
     redirect_to root_path
   end
 end
