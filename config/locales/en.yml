@@ -10,6 +10,10 @@ en:
       account: "Account"
       help: "Help"
       home: "Home"
+      language:
+        en: "English"
+        raw: "Language"
+        vi: "Vietnamese"
       log_in: "Log in"
       log_out: "Log out"
       profile: "Profile"
@@ -60,13 +64,39 @@ en:
       sign_up: "Sign up now!"
       title: "Home"
   users:
+    create:
+      success: "Successfully created new user"
+      fail: "Create user failed"
+    destroy:
+      fail: "Cannot delete user"
+      success: "User deleted"
+    edit:
+      change: "Change"
+      intro: "Update your profile"
+      save: "Save changes"
+      title: "Edit user"
+    flash:
+      not_admin: "You don't have Admin priviledge"
+      not_correct_user: "Cannot edit or update if not the correct user"
+      not_found: "Cannot find user"
+      not_logged_in: "You haven't logged in yet"
+    form:
+      confirmation: "Password confirmation"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+    index:
+      title: "All users"
     new:
-      sign_up:
-        form:
-          confirmation: "Confirmation"
-          create: "Create my account"
-          email: "Email"
-          name: "Name"
-          password: "Password"
-        success: "Welcome to the Sample App!"
-        title: "Sign up"
+      create: "Create my account"
+      success: "Welcome to the Sample App!"
+      title: "Sign up"
+    update:
+      success: "Profile updated successfully"
+      fail: "Update failed"
+    user:
+      delete: "Delete"
+      sure: "You sure?"
+  will_paginate:
+    next_label: "Next"
+    previous_label: "Previous"

@@ -10,6 +10,10 @@ vi:
       account: "Tài khoản"
       help: "Trợ giúp"
       home: "Trang chủ"
+      language:
+        en: "Tiếng Anh"
+        raw: "Ngôn ngữ"
+        vi: "Tiếng Việt"
       log_in: "Đăng nhập"
       log_out: "Đăng xuất"
       profile: "Thông tin người dùng"
@@ -60,13 +64,39 @@ vi:
       sign_up: "Đăng ký ngay!"
       title: "Trang chủ"
   users:
+    create:
+      success: "Tạo người dùng mới thành công"
+      fail: "Tạo người dùng mới thất bại"
+    destroy:
+      fail: "Xóa người dùng thất bại"
+      success: "Người dùng đã được xóa"
+    edit:
+      change: "Thay đổi"
+      intro: "Cập nhật thông tin"
+      save: "Lưu thay đổi"
+      title: "Chỉnh sửa"
+    flash:
+      not_admin: "Bạn không có quyền Admin"
+      not_correct_user: "Không thể chỉnh sửa thông tin nếu không đúng người dùng"
+      not_found: "Không tìm thấy người dùng"
+      not_logged_in: "Bạn chưa đăng nhập"
+    form:
+      confirmation: "Xác nhận mật khẩu"
+      email: "Email"
+      name: "Tên"
+      password: "Mật khẩu"
+    index:
+      title: "Tất cả người dùng"
     new:
-      signup:
-        form:
-          confirmation: "Xác nhận mật khẩu"
-          create: "Tạo tài khoản"
-          email: "Email"
-          name: "Tên"
-          password: "Mật khẩu"
-        success: "Chào mừng bạn đến với ứng dụng mẫu!"
-        title: "Đăng ký"
+      create: "Tạo tài khoản"
+      success: "Chào mừng bạn đến với ứng dụng mẫu!"
+      title: "Đăng ký"
+    update:
+      success: "Cập nhật thông tin thành công"
+      fail: "Cập nhật thông tin thất bại"
+    user:
+      delete: "Xóa"
+      sure: "Bạn chắc chắn xóa?"
+  will_paginate:
+    next_label: "Sau"
+    previous_label: "Trước"

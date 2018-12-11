@@ -7,10 +7,14 @@ module SessionsHelper
   def check_log_in user, params
     if user && user.authenticate(params[:session][:password])
       log_in user
-      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_to user
+      if params[:session][:remember_me] == Settings.sessions.remember_me
+        remember user
+      else
+        forget user
+      end
+      redirect_back_or user
     else
-      flash.now[:danger] = t("sessions.new.login.fail")
+      flash.now[:danger] = t "sessions.new.login.fail"
       render :new
     end
   end
@@ -27,12 +31,17 @@ module SessionsHelper
     if (user_id = session[:user_id])
       @current_user ||= User.find_by(id: user_id)
     elsif (user_id = cookies.signed[:user_id])
-      user = User.find_by(id: user_id)
+      user = User.find_by id: user_id
       if user && user.authenticated?(cookies[:remember_token])
         log_in user
         @current_user = user
       end
     end
+  end
+
+  # Returns true if the given user is the current user.
+  def current_user? user
+    user == current_user
   end
 
   # Returns true if the user is logged in, false otherwise.
@@ -43,14 +52,25 @@ module SessionsHelper
   # Forgets a persistent session.
   def forget user
     user.forget
-    cookies.delete(:user_id)
-    cookies.delete(:remember_token)
+    cookies.delete :user_id
+    cookies.delete :remember_token
   end
 
   # Logs out the current user.
   def log_out
-    forget(current_user)
-    session.delete(:user_id)
+    forget current_user
+    session.delete :user_id
     @current_user = nil
+  end
+
+  # Redirects to stored location (or to the default).
+  def redirect_back_or default
+    redirect_to(session[:forwarding_url] || default)
+    session.delete :forwarding_url
+  end
+
+  # Stores the URL trying to be accessed.
+  def store_location
+    session[:forwarding_url] = request.original_url if request.get?
   end
 end
