@@ -1,12 +1,16 @@
 locales:
   available: ["en", "vi"]
   default: "en"
+sessions:
+  remember_me: "1"
 users:
   email:
     max_length: 255
   gravatar:
-    size: 80
+    size: 50
   name:
     max_length: 50
+  paginate:
+    per_page: 10
   password:
     min_length: 6
