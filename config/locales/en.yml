@@ -30,6 +30,27 @@ en:
       author: "Michael Hartl"
       contact: "Contact"
       news: "News"
+  password_resets:
+    create:
+      flash:
+        info: "Email sent with password reset instructions"
+        email_not_found: "Email address not found"
+    edit:
+      confirmation: "Password confirmation"
+      password: "Password"
+      title: "Password reset"
+      update: "Update password"
+    flash:
+      expired: "Password reset has expired."
+      user_not_found: "User not found."
+    new:
+      email: "Email"
+      submit: "Submit"
+      title: "Forgot password"
+    update:
+      flash:
+        empty: "can't be empty"
+        reset_success: "Password has been reset."
   sessions:
     helper:
       flash:
@@ -40,6 +61,7 @@ en:
       login:
         form:
           email: "Email"
+          forgot_password: "(forgot password)"
           login: "Login"
           new_user: "New user?"
           password: "Password"
@@ -74,12 +96,13 @@ en:
       title: "Home"
   users:
     create:
-      check_mail: "Please check your email to activate your account."
-      fail: "Create user failed"
-      success: "Successfully created new user"
+      flash:
+        check_mail: "Please check your email to activate your account."
+        create_fail: "Create user failed"
     destroy:
-      fail: "Cannot delete user"
-      success: "User deleted"
+      flash:
+        cannot_delete: "Cannot delete user"
+        deleted: "User deleted"
     edit:
       change: "Change"
       intro: "Update your profile"
@@ -102,8 +125,9 @@ en:
       success: "Welcome to the Sample App!"
       title: "Sign up"
     update:
-      success: "Profile updated successfully"
-      fail: "Update failed"
+      flash:
+        updated: "Profile updated successfully"
+        update_fail: "Update failed"
     user:
       delete: "Delete"
       sure: "You sure?"
@@ -115,8 +139,11 @@ en:
       sample_app: "Sample App"
       subject: "Account activation"
     password_reset:
-      hi: "Hi"
-      email : "to@example.org"
+      expiration: "This link will expire in two hours."
+      instruction: "To reset your password click the link below: "
+      remind: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
+      reset: "Reset password"
+      subject: "Password reset"
   will_paginate:
     next_label: "Next"
     previous_label: "Previous"
