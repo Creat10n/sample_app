@@ -2,6 +2,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
+  has_many :microposts, dependent: :destroy
   scope :activated, ->{where activated: true}
 
   validates :name, presence: true,
@@ -80,8 +81,13 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
-  private
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    Micropost.feed id
+  end
 
+  private
   # Converts email to all lower-case.
   def downcase_email
     email.downcase!

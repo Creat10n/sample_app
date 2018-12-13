@@ -4,6 +4,9 @@ en:
       flash:
         activated: "Account activated!"
         invalid_link: "Invalid activation link"
+  application:
+    flash:
+      not_logged_in: "You haven't logged in yet"
   dictionary:
     base_title: "Ruby on Rails Tutorial Sample App"
     by: "by"
@@ -30,6 +33,23 @@ en:
       author: "Michael Hartl"
       contact: "Contact"
       news: "News"
+  microposts:
+    alert:
+      max_file_size: "Maximum file size is 5MB. Please choose a smaller file."
+    create:
+      flash:
+        created: "Micropost created!"
+    destroy:
+      flash:
+        cannot_delete: "Micropost cannot be delete"
+        deleted: "Micropost deleted"
+    micropost:
+      ago: "ago."
+      delete: "delete"
+      posted: "Posted"
+      sure: "You sure?"
+    flash:
+      picture_size: "should be less than 5MB"
   password_resets:
     create:
       flash:
@@ -42,6 +62,8 @@ en:
       update: "Update password"
     flash:
       expired: "Password reset has expired."
+      incorrect_user: "User's not correct."
+      invalid_user: "User invalid."
       user_not_found: "User not found."
     new:
       email: "Email"
@@ -51,6 +73,7 @@ en:
       flash:
         empty: "can't be empty"
         reset_success: "Password has been reset."
+        reset_fail: "Password cannot reset."
   sessions:
     helper:
       flash:
@@ -71,6 +94,20 @@ en:
     error_messages:
       error: "error"
       form: "The form contains"
+    micropost_form:
+      compose_micropost: "Compose new micropost ..."
+      post: "Post"
+    microposts:
+      micropost_feed: "Micropost Feed"
+    user_info:
+      micropost: "micropost"
+      view_profile: "view my profile"
+    welcome:
+      info: "Ruby on Rails Tutorial Sample App"
+      intro: "This is the home page for"
+      rails_link: "http://rubyonrails.org/"
+      sign_up: "Sign up now!"
+      title: "Home"
   static_pages:
     about:
       book: "book"
@@ -89,11 +126,6 @@ en:
       instruction2: "To get help on this sample app, see the"
       page: "Rails Tutorial help page"
       title: "Help"
-    home:
-      info: "Ruby on Rails Tutorial Sample App"
-      intro: "This is the home page for"
-      sign_up: "Sign up now!"
-      title: "Home"
   users:
     create:
       flash:
@@ -110,9 +142,8 @@ en:
       title: "Edit user"
     flash:
       not_admin: "You don't have Admin priviledge"
-      not_correct_user: "Cannot edit or update if not the correct user"
+      incorrect_user: "Cannot edit or update if not the correct user"
       not_found: "Cannot find user"
-      not_logged_in: "You haven't logged in yet"
     form:
       confirmation: "Password confirmation"
       email: "Email"
@@ -124,6 +155,8 @@ en:
       create: "Create my account"
       success: "Welcome to the Sample App!"
       title: "Sign up"
+    show:
+      microposts: "Microposts"
     update:
       flash:
         updated: "Profile updated successfully"
