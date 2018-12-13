@@ -1,4 +1,9 @@
 vi:
+  account_activations:
+    edit:
+      flash:
+        activated: "Tài khoản đã được kích hoạt!"
+        invalid_link: "Link kích hoạt không tồn tại"
   dictionary:
     base_title: "Ruby on Rails Tutorial Sample App"
     by: "bởi"
@@ -26,9 +31,13 @@ vi:
       contact: "Liên hệ"
       news: "Tin tức"
   sessions:
+    helper:
+      flash:
+        check_email: "Vui lòng kiểm tra mail để lấy link kích hoạt tài khoản."
+        invalid_email_pass: "Email/Password không hợp lệ"
+        not_activated: "Tài khoản chưa được kích hoạt. "
     new:
       login:
-        fail: "Email/Mật khẩu không hợp lệ"
         form:
           email: "Email"
           login: "Đăng nhập"
@@ -65,8 +74,9 @@ vi:
       title: "Trang chủ"
   users:
     create:
-      success: "Tạo người dùng mới thành công"
+      check_mail: "Xin hãy kích hoạt tài khoản qua mail."
       fail: "Tạo người dùng mới thất bại"
+      success: "Tạo người dùng mới thành công"
     destroy:
       fail: "Xóa người dùng thất bại"
       success: "Người dùng đã được xóa"
@@ -97,6 +107,16 @@ vi:
     user:
       delete: "Xóa"
       sure: "Bạn chắc chắn xóa?"
+  user_mailer:
+    account_activation:
+      activate: "Kích hoạt"
+      guide: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấn vào link bên dưới để kích hoạt tài khoản của bạn:"
+      hi: "Chào"
+      sample_app: "Ứng Dụng Mẫu"
+      subject: "Kích hoạt tài khoản"
+    password_reset:
+      hi: "Chào"
+      email : "to@example.org"
   will_paginate:
     next_label: "Sau"
     previous_label: "Trước"

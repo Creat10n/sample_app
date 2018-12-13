@@ -1,4 +1,9 @@
 en:
+  account_activations:
+    edit:
+      flash:
+        activated: "Account activated!"
+        invalid_link: "Invalid activation link"
   dictionary:
     base_title: "Ruby on Rails Tutorial Sample App"
     by: "by"
@@ -26,9 +31,13 @@ en:
       contact: "Contact"
       news: "News"
   sessions:
+    helper:
+      flash:
+        check_email: "Check your email for the activation link."
+        invalid_email_pass: "Invalid email/password combination"
+        not_activated: "Account not activated. "
     new:
       login:
-        fail: "Invalid email/password combination"
         form:
           email: "Email"
           login: "Login"
@@ -65,8 +74,9 @@ en:
       title: "Home"
   users:
     create:
-      success: "Successfully created new user"
+      check_mail: "Please check your email to activate your account."
       fail: "Create user failed"
+      success: "Successfully created new user"
     destroy:
       fail: "Cannot delete user"
       success: "User deleted"
@@ -97,6 +107,16 @@ en:
     user:
       delete: "Delete"
       sure: "You sure?"
+  user_mailer:
+    account_activation:
+      activate: "Activate"
+      guide: "Welcome to the Sample App! Click on the link below to activate your account:"
+      hi: "Hi"
+      sample_app: "Sample App"
+      subject: "Account activation"
+    password_reset:
+      hi: "Hi"
+      email : "to@example.org"
   will_paginate:
     next_label: "Next"
     previous_label: "Previous"
