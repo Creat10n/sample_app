@@ -30,6 +30,27 @@ vi:
       author: "Michael Hartl"
       contact: "Liên hệ"
       news: "Tin tức"
+  password_resets:
+    create:
+      flash:
+        info: "Mail hướng dẫn thay đổi mật khẩu đã được gủi đi"
+        email_not_found: "Không tìm thấy địa chỉ mail"
+    edit:
+      confirmation: "Xác nhận mật khẩu"
+      password: "Mật khẩu"
+      title: "Thay đổi mật khẩu"
+      update: "Cập nhật mật khẩu"
+    flash:
+      expired: "Link thay đổi mật khẩu đã hết hạn."
+      user_not_found: "Không tìm thấy người dùng."
+    new:
+      email: "Email"
+      submit: "Gửi"
+      title: "Quên mật khẩu"
+    update:
+      flash:
+        empty: "không được để trống"
+        reset_success: "Mật khẩu đã được thay đổi."
   sessions:
     helper:
       flash:
@@ -40,6 +61,7 @@ vi:
       login:
         form:
           email: "Email"
+          forgot_password: "(Quên mật khẩu)"
           login: "Đăng nhập"
           new_user: "Người dùng mới?"
           password: "Mật khẩu"
@@ -74,12 +96,13 @@ vi:
       title: "Trang chủ"
   users:
     create:
-      check_mail: "Xin hãy kích hoạt tài khoản qua mail."
-      fail: "Tạo người dùng mới thất bại"
-      success: "Tạo người dùng mới thành công"
+      flash:
+        check_mail: "Xin hãy kiểm tra mail của bạn để kích hoạt tài khoản."
+        create_fail: "Tạo người dùng mới thất bại"
     destroy:
-      fail: "Xóa người dùng thất bại"
-      success: "Người dùng đã được xóa"
+      flash:
+        cannot_delete: "Không thể xóa người dùng này"
+        deleted: "Người dùng đã được xóa"
     edit:
       change: "Thay đổi"
       intro: "Cập nhật thông tin"
@@ -102,8 +125,9 @@ vi:
       success: "Chào mừng bạn đến với ứng dụng mẫu!"
       title: "Đăng ký"
     update:
-      success: "Cập nhật thông tin thành công"
-      fail: "Cập nhật thông tin thất bại"
+      flash:
+        updated: "Cập nhật thông tin thành công"
+        update_fail: "Cập nhật thất bại"
     user:
       delete: "Xóa"
       sure: "Bạn chắc chắn xóa?"
@@ -115,8 +139,11 @@ vi:
       sample_app: "Ứng Dụng Mẫu"
       subject: "Kích hoạt tài khoản"
     password_reset:
-      hi: "Chào"
-      email : "to@example.org"
+      expiration: "Link sẽ hết hạn sử dụng sau 2 tiếng."
+      instruction: "Để thay đổi mật khẩu, xin hãy nhấn vào link bên dưới: "
+      remind: "Nếu bạn không có yêu cầu đổi mật khẩu, xin hãy bỏ qua tin nhắn này và mật khẩu của bạn vẫn được giữ nguyên."
+      reset: "Thay đổi mật khẩu"
+      subject: "Mật khẩu thay đổi"
   will_paginate:
     next_label: "Sau"
     previous_label: "Trước"
