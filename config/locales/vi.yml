@@ -4,6 +4,9 @@ vi:
       flash:
         activated: "Tài khoản đã được kích hoạt!"
         invalid_link: "Link kích hoạt không tồn tại"
+  application:
+    flash:
+      not_logged_in: "Bạn chưa đăng nhập"
   dictionary:
     base_title: "Ruby on Rails Tutorial Sample App"
     by: "bởi"
@@ -30,6 +33,23 @@ vi:
       author: "Michael Hartl"
       contact: "Liên hệ"
       news: "Tin tức"
+  microposts:
+    alert:
+      max_file_size: "Dung lượng file tối đa là 5MB. Xin hãy chọn file có dung lượng nhỏ hơn."
+    create:
+      flash:
+        created: "Micropost được tạo thành công!"
+    destroy:
+      flash:
+        cannot_delete: "Micropost không thể xóa"
+        deleted: "Micropost đã được xóa"
+    micropost:
+      ago: "trước."
+      delete: "xóa"
+      posted: "Được đăng"
+      sure: "Bạn chắc chắn?"
+    flash:
+      picture_size: "nên nhỏ hơn 5MB"
   password_resets:
     create:
       flash:
@@ -42,6 +62,8 @@ vi:
       update: "Cập nhật mật khẩu"
     flash:
       expired: "Link thay đổi mật khẩu đã hết hạn."
+      incorrect_user: "Người dùng không đúng."
+      invalid_user: "Người dùng không hợp lệ."
       user_not_found: "Không tìm thấy người dùng."
     new:
       email: "Email"
@@ -51,6 +73,7 @@ vi:
       flash:
         empty: "không được để trống"
         reset_success: "Mật khẩu đã được thay đổi."
+        reset_fail: "Thay đổi mật khẩu thất bại."
   sessions:
     helper:
       flash:
@@ -71,6 +94,20 @@ vi:
     error_messages:
       error: "lỗi"
       form: "Form có"
+    micropost_form:
+      compose_micropost: "Tạo micropost mới ..."
+      post: "Đăng"
+    microposts:
+      micropost_feed: "Bảng tin Micropost"
+    user_info:
+      micropost: "micropost"
+      view_profile: "xem thông tin"
+    welcome:
+      info: "Ruby on Rails Tutorial Sample App"
+      intro: "Trang chủ cho"
+      rails_link: "http://rubyonrails.org/"
+      sign_up: "Đăng ký ngay!"
+      title: "Trang chủ"
   static_pages:
     about:
       book: "sách"
@@ -89,11 +126,6 @@ vi:
       instruction2: "Để tìm kiếm sự giúp đỡ với ứng dụng mẫu thì có tại"
       page: "trang giúp đỡ về Rails"
       title: "Giúp đỡ"
-    home:
-      info: "Ứng dụng mẫu về Ruby on Rails"
-      intro: "Đây là trang chủ cho"
-      sign_up: "Đăng ký ngay!"
-      title: "Trang chủ"
   users:
     create:
       flash:
@@ -110,9 +142,8 @@ vi:
       title: "Chỉnh sửa"
     flash:
       not_admin: "Bạn không có quyền Admin"
-      not_correct_user: "Không thể chỉnh sửa thông tin nếu không đúng người dùng"
+      incorrect_user: "Không thể chỉnh sửa thông tin nếu không đúng người dùng"
       not_found: "Không tìm thấy người dùng"
-      not_logged_in: "Bạn chưa đăng nhập"
     form:
       confirmation: "Xác nhận mật khẩu"
       email: "Email"
@@ -124,6 +155,8 @@ vi:
       create: "Tạo tài khoản"
       success: "Chào mừng bạn đến với ứng dụng mẫu!"
       title: "Đăng ký"
+    show:
+      microposts: "Microposts"
     update:
       flash:
         updated: "Cập nhật thông tin thành công"

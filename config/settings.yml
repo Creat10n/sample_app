@@ -1,8 +1,20 @@
 locales:
   available: ["en", "vi"]
   default: "en"
+microposts:
+  content:
+    length: 140
+  image:
+    accept: "image/jpeg,image/gif,image/png"
+  paginate:
+    per_page: 10
+  picture_size: 5
 sessions:
   remember_me: "1"
+static_pages:
+  feed:
+    paginate:
+      per_page: 4
 users:
   email:
     max_length: 255
