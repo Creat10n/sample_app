@@ -66,15 +66,13 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = "nlhuy-sample-app.herokuapp.com"
-  config.action_mailer.default_url_options = {host: host}
+  config.action_mailer.default_url_options = {host: ENV["host"], protocol: ENV["protocol"]}
   ActionMailer::Base.smtp_settings = {
-    address: "smtp.sendgrid.net",
+    address: ENV["address"],
     port: "587",
     authentication: :plain,
-    user_name: ENV["SENDGRID_USERNAME"],
-    password: ENV["SENDGRID_PASSWORD"],
-    domain: "heroku.com",
+    user_name: ENV["gmail_username"],
+    password: ENV["gmail_password"],
     enable_starttls_auto: true
   }
 
@@ -93,9 +91,9 @@ Rails.application.configure do
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
-    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
-    config.logger    = ActiveSupport::TaggedLogging.new(logger)
+    config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
 
   # Do not dump schema after migrations.

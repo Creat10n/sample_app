@@ -18,11 +18,19 @@ static_pages:
 users:
   email:
     max_length: 255
+  followers:
+    paginate:
+      per_page: 10
+  following:
+    paginate:
+      per_page: 10
   gravatar:
     size: 50
+    small_size: 30
   name:
     max_length: 50
   paginate:
     per_page: 10
   password:
     min_length: 6
+    reset_expired: 2
