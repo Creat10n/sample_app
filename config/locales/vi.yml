@@ -74,6 +74,10 @@ vi:
         empty: "không được để trống"
         reset_success: "Mật khẩu đã được thay đổi."
         reset_fail: "Thay đổi mật khẩu thất bại."
+  relationships:
+    flash:
+      user_not_found: "Không tìm thấy người dùng."
+      relationship_not_found: "Không tìm thấy quan hệ."
   sessions:
     helper:
       flash:
@@ -99,6 +103,9 @@ vi:
       post: "Đăng"
     microposts:
       micropost_feed: "Bảng tin Micropost"
+    stats:
+      followers: "Người theo dõi"
+      following: "Đang theo dõi"
     user_info:
       micropost: "micropost"
       view_profile: "xem thông tin"
@@ -144,6 +151,12 @@ vi:
       not_admin: "Bạn không có quyền Admin"
       incorrect_user: "Không thể chỉnh sửa thông tin nếu không đúng người dùng"
       not_found: "Không tìm thấy người dùng"
+    follow:
+      follow: "Theo dõi"
+    followers:
+      title: "Người theo dõi"
+    following:
+      title: "Đang theo dõi"
     form:
       confirmation: "Xác nhận mật khẩu"
       email: "Email"
@@ -157,6 +170,10 @@ vi:
       title: "Đăng ký"
     show:
       microposts: "Microposts"
+    show_follow:
+      microposts: "Microposts:"
+    unfollow:
+      unfollow: "Ngừng theo dõi"
     update:
       flash:
         updated: "Cập nhật thông tin thành công"

@@ -74,6 +74,10 @@ en:
         empty: "can't be empty"
         reset_success: "Password has been reset."
         reset_fail: "Password cannot reset."
+  relationships:
+    flash:
+      user_not_found: "User not found."
+      relationship_not_found: "Relationship not found."
   sessions:
     helper:
       flash:
@@ -99,6 +103,9 @@ en:
       post: "Post"
     microposts:
       micropost_feed: "Micropost Feed"
+    stats:
+      followers: "followers"
+      following: "following"
     user_info:
       micropost: "micropost"
       view_profile: "view my profile"
@@ -144,6 +151,12 @@ en:
       not_admin: "You don't have Admin priviledge"
       incorrect_user: "Cannot edit or update if not the correct user"
       not_found: "Cannot find user"
+    follow:
+      follow: "Follow"
+    followers:
+      title: "Followers"
+    following:
+      title: "Following"
     form:
       confirmation: "Password confirmation"
       email: "Email"
@@ -157,6 +170,10 @@ en:
       title: "Sign up"
     show:
       microposts: "Microposts"
+    show_follow:
+      microposts: "Microposts:"
+    unfollow:
+      unfollow: "Unfollow"
     update:
       flash:
         updated: "Profile updated successfully"

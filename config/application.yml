@@ -12,13 +12,13 @@
 development:
   address: "smtp.gmail.com"
   gmail_username: "nguyen.luong.huy@framgia.com"
-  gmail_password: "znejgipzrjmydsnb"
+  gmail_password: "lphmtrjjrxcipeie"
   host: "localhost:3000"
   protocol: "http"
 production:
   address: "smtp.gmail.com"
   domain: "heroku.com"
   gmail_username: "nguyen.luong.huy@framgia.com"
-  gmail_password: "lqcsbivscgxempzm"
+  gmail_password: "jedyveazkmxldakd"
   host: "nlhuy-sample-app.herokuapp.com"
   protocol: "https"
